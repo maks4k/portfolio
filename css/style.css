@@ -1,0 +1,554 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:wght@400;500;700&display=swap");
+/* 
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+   */
+/* dm
+   // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 1000
+
+.dm-sans-<uniquifier> {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* * {
+  border: 1px solid red;
+} */
+
+
+:root{
+    --black:#171718;
+    --black-border:#26292d;
+    --white:#fff;
+    --purple:#5C62EC;
+
+    --dark-bg:var(--black);
+    --dark-border:var(--black-border);
+    --header-text:var(--white);
+    --akcent:var(--purple);
+}
+
+
+body {
+  font-family: "DM Sans", serif;
+  letter-spacing: -0.5px;
+}
+/* NAV */
+.nav {
+  padding: 20px 0px;
+  background-color:var(--dark-bg);
+  color:var(--header-text);
+  border-bottom:var(--dark-border)1px solid;
+}
+.container {
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+.nav-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  column-gap: 30px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+.logo-title{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.logo{
+    color:var(--header-text);
+    text-decoration: none;
+    padding-top: 10px;
+    font-size: 24px;
+    font-family: "Poppins", serif;
+    margin-right: auto;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 40px;
+    font-style: 16px;
+    font-family: "Poppins", serif;
+    font-weight: 500px;
+    row-gap: 40px;
+
+}
+.nav-list__link{
+    text-decoration: none;
+    color: var(--header-text);
+}
+.nav-list__item{
+  transition: 0.2s ease-in;}
+
+.nav-list__item:hover{
+  opacity: 0.8;
+}
+.nav-list__item:active{
+  opacity: 0.5;
+}
+.nav-list__link-active{
+position: relative;
+}
+.nav-list__link-active::before{
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 100%;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color:var(--akcent);
+}
+/* темная тема */
+.dark__mode{
+display: flex;
+justify-content: space-between;
+width: 51px;
+height: 26px;
+background-color: #272727;
+border-radius: 50px;
+padding: 5px;
+position: relative;
+order: 9;
+}
+.dark__mode::before{
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+background-color: var(--header-text);
+transition: all 0.5s ease-in;
+}
+.dark__mode_icon{
+  position: relative;
+  z-index: 9;
+}
+.dark__mode_active::before{
+left: 26px;
+}
+/* ВЕРСТКА ШАПКИ */
+.header{
+  padding: 40px 0px;
+  min-height: 695px;
+    background-color: var(--dark-bg);
+    color: var(--header-text);
+    background-image:url(../img/png-klev-club-p-pautina-png-16.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.header__contaner{
+  max-width: 630px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__name{
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Poppins", serif;
+}
+.header__important{
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Poppins", serif;
+  color: var(--akcent);
+}
+.header__welcome{
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Poppins", serif;
+}
+.header__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 94%;
+  padding: 30px 0px;
+}
+.header__info{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", serif;
+  margin-left: 10px;
+  color: var(--akcent);
+}
+.header__description{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", serif;
+  /* margin-top: 20px; */
+  margin-left: 10px;
+}
+.header__link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__button{
+background-color: var(--akcent);
+text-decoration: none;
+color: var(--header-text);
+padding: 12px 0px;
+border-radius: 10%;
+width:8%;
+text-align: center;
+transition: opacity 0.2s ease-in;
+transition: box-shadow 0.3s ease;
+}
+.header__button:hover{
+  opacity: 0.8;
+  box-shadow: 0 4px 8px var(--akcent);
+}
+.header__button:active{
+  opacity: 0.5;
+  box-shadow: 0 4px 8px var(--akcent);
+}
+
+
+/* Секция проектов */
+.secthion__projects{
+  background-color: var(--dark-bg);
+  min-height: 300px;
+}
+/* .projects__card{
+  display: flex;
+  justify-content: space-between;
+} */
+.projects__title{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Poppins", serif;
+  font-style: normal;
+  color: var(--akcent);
+  text-transform:uppercase;
+  text-shadow: 19px 10px 2px rgba(92,98,236, 0.24);
+}
+
+.title__card{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400px;
+  font-family: "Poppins", serif;
+  font-style: normal;
+  color: var(--akcent);
+  text-transform:uppercase;
+  text-shadow: 19px 10px 2px rgba(92,98,236, 0.24);
+}
+.contaner__card-one{
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card__item{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items: center;
+text-align: center;
+max-width: 300px;
+height: 300px;
+
+}
+.card__item_img{
+  border-radius: 40px;
+  border-collapse: collapse;
+}
+
+
+
+/* FOOTER */
+.footer{
+font-family: 'Courier New', Courier, monospace;
+background-color: var(--header-text);
+min-height: 200px;
+display: flex;
+flex-direction: column;
+}
+.footer-content{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  padding-top: 30px
+}
+.footer__text{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", serif;
+  color: var(--dark-bg);
+  padding-top: 40px;
+}
+.icon__social{
+  transition: transform 0.1 ease
+}
+.icon__social:hover{
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+/* CONTACTS */
+.main__contacts{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 0px;
+background-image: url(../img/picture/images\ \(1\).jpg);
+background-repeat: no-repeat;
+background-size: contain;
+}
+.header__important{
+  font-size: 60px;
+  font-weight: 700;
+  font-family: "Poppins", serif;
+  color: var(--akcent);
+
+}
+.contacts__important{
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Poppins", serif;
+  color: var(--dark-bg);
+}
+.contacts__text{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", serif;
+  color: var(--dark-bg);
+  display: block;
+  margin-top: 20px;
+}
+.header__had{
+  display: block;
+  margin-top: 20px;
+}
+
+
+/* 
+SKILS */
+
+.skills {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.skills__title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--akcent);
+}
+
+.skills__description {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skills__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills__item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skills__item:hover {
+  transform: scale(1.05);
+}
+
+.skills__item-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--akcent);
+}
+
+.skills__item-description {
+  font-size: 16px;
+  color: #555;
+  font-family: "Poppins", serif;
+}
+
+/* 
+Мобильная адптация */
+@media (max-width: 1400px){
+.main__contacts{
+  background-image: url(../img/picture/images\ \(1\).jpg);
+background-repeat: no-repeat;
+background-size: 300px;
+}
+.header__button{
+  width: 100px;
+}
+}@media (max-width: 1200px){
+  .main__contacts{
+    background-image: url(../img/picture/images\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: 250px;
+  
+  }
+  }
+  @media (max-width: 780px){
+    .nav-row {
+      justify-content: space-between;
+    }
+    .main__contacts{
+      background-image: url(../img/picture/images\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    }
+    .header__name{
+      font-size: 25px;
+    }
+    .header__important{
+      font-size: 25px;
+    }
+    .header__welcome{
+      font-size: 25px;
+    }
+    .header__button{
+      width: 20%;
+    }
+    .projects__title strong{
+      font-size: 25px;
+    }
+    .title__card{
+      font-size: 12px;
+    }
+    .footer__text{
+      font-size: 11px;
+    }
+    .skills__title{
+      font-size: 20px;
+    }
+    .skills__item-title{
+      font-size: 20px;
+    }
+    .skills__description{
+      font-size: 11px;
+    }
+    .header__important{
+      font-size: 25px;
+    }
+    .contacts__important{
+      font-size: 22px;
+    }
+    .contacts__text{
+      font-size: 11px;
+    }
+    .dark__mode{
+      display: flex;
+      justify-content: space-between;
+      width: 51px;
+      height: 26px;
+      background-color: #272727;
+      border-radius: 50px;
+      padding: 5px;
+      position: relative;
+      order: 0;
+      }
+    }
+    @media (max-width: 480px){
+      .main__contacts{
+        background-image: url(../img/picture/images\ \(1\).jpg);
+      background-repeat: no-repeat;
+      background-size: 100px;
+      }
+      }
+@media (max-width: 620px){
+  .header__name{
+    font-size: 30px;
+  }
+  .header__important{
+    font-size: 30px;
+  }
+  .header__welcome{
+    font-size: 30px;
+  }
+  .header__button{
+    width: 25%;
+  }
+  .projects__title strong{
+    font-size: 30px;
+  }
+  .title__card{
+    font-size: 14px;
+  }
+  .footer__text{
+    font-size: 12px;
+  }
+  .skills__title{
+    font-size: 25px;
+  }
+  .skills__item-title{
+    font-size: 25px;
+  }
+  .skills__description{
+    font-size: 12px;
+  }
+  .header__important{
+    font-size: 30px;
+  }
+  .contacts__important{
+    font-size: 27px;
+  }
+  .contacts__text{
+    font-size: 12px;
+  }
+}
+@media(max-width: 400px){
+.header__button{
+width: 50px;
+}
+  }
