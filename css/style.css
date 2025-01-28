@@ -55,7 +55,7 @@
 .dark{
   /* dark-mode */
  background-color:var(--dark-bg)!important;
-
+ color:var(--header-text)!important;
 }
 /* изменения текст и картинки используя вложеность для контактс */
 .main__contacts.dark {
@@ -67,6 +67,10 @@
 .main__contacts.dark .contacts__important,
 .main__contacts.dark .contacts__text {
   color: var(--header-text) !important;
+}
+/* плавность переключение темы */
+header, .secthion__projects, .skills, .main__contacts {
+  transition: background-color 0.3s, color 0.3s;
 }
 html body {
   font-family: "DM Sans", serif;
