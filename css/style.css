@@ -46,13 +46,33 @@
     --dark-border:var(--black-border);
     --header-text:var(--white);
     --akcent:var(--purple);
+    /* litgh mode */
+    --page-bg:var(--white);
+    --text-color:var(--black)
+}
+/* 
+//темная тема */
+.dark{
+  /* dark-mode */
+ background-color:var(--dark-bg)!important;
+
+}
+/* изменения текст и картинки используя вложеность для контактс */
+.main__contacts.dark {
+  background-image: none; /* Убираем фоновое изображение */
+  background-color:var(--dark-bg); /* Устанавливаем темный фон (при необходимости) */
 }
 
-
-body {
+.main__contacts.dark .header__important,
+.main__contacts.dark .contacts__important,
+.main__contacts.dark .contacts__text {
+  color: var(--header-text) !important;
+}
+html body {
   font-family: "DM Sans", serif;
   letter-spacing: -0.5px;
-}
+  /* color-mode */
+} 
 /* NAV */
 .nav {
   padding: 20px 0px;
@@ -123,7 +143,7 @@ position: relative;
     width: 100%;
     background-color:var(--akcent);
 }
-/* темная тема */
+/* темная тема кнопка */
 .dark__mode{
 display: flex;
 justify-content: space-between;
@@ -158,8 +178,8 @@ left: 26px;
 .header{
   padding: 40px 0px;
   min-height: 695px;
-    background-color: var(--dark-bg);
-    color: var(--header-text);
+  background-color: var(--page-bg); 
+  color: var(--text-color);
     background-image:url(../img/png-klev-club-p-pautina-png-16.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -241,7 +261,8 @@ transition: box-shadow 0.3s ease;
 
 /* Секция проектов */
 .secthion__projects{
-  background-color: var(--dark-bg);
+  background-color: var(--page-bg); 
+  color: var(--text-color);
   min-height: 300px;
 }
 /* .projects__card{
@@ -266,8 +287,8 @@ transition: box-shadow 0.3s ease;
   font-family: "Poppins", serif;
   font-style: normal;
   color: var(--akcent);
-  text-transform:uppercase;
-  text-shadow: 19px 10px 2px rgba(92,98,236, 0.24);
+  /* text-transform:uppercase;
+  text-shadow: 19px 10px 2px rgba(92,98,236, 0.24); */
 }
 .contaner__card-one{
   display: flex;
@@ -296,7 +317,8 @@ height: 300px;
 /* FOOTER */
 .footer{
 font-family: 'Courier New', Courier, monospace;
-background-color: var(--header-text);
+background-color: var(--page-bg); 
+color: var(--text-color);
 min-height: 200px;
 display: flex;
 flex-direction: column;
@@ -331,9 +353,10 @@ flex-direction: column;
   justify-content: center;
   gap: 40px;
   padding: 40px 0px;
-background-image: url(../img/picture/images\ \(1\).jpg);
-background-repeat: no-repeat;
-background-size: contain;
+  background-image: url(../img/picture/images\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color:  var(--dark-bg);
 }
 .header__important{
   font-size: 60px;
@@ -368,6 +391,8 @@ SKILS */
 .skills {
   padding: 50px 0;
   background-color: #f9f9f9;
+  font-family:"Poppins", serif ;
+  letter-spacing: 1px;
 }
 
 .skills__title {
