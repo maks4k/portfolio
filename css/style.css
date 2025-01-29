@@ -50,6 +50,9 @@
     --page-bg:var(--white);
     --text-color:var(--black)
 }
+
+
+
 /* 
 //темная тема */
 .dark{
@@ -72,6 +75,8 @@
 header, .secthion__projects, .skills, .main__contacts {
   transition: background-color 0.3s, color 0.3s;
 }
+
+
 html body {
   font-family: "DM Sans", serif;
   letter-spacing: -0.5px;

@@ -7,6 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const project = document.querySelector(".secthion__projects");
   const skills = document.querySelector(".skills");
   const contacts = document.querySelector(".main__contacts");
+  const links = document.querySelectorAll('.nav-list__link');
+  const currentUrl = window.location.href;
+
+  // цикл опрежделения на какой страницы мы находимся и добавление к ней класс active
+  links.forEach(el=>{
+    if (el.href.includes(currentUrl)) {
+      el.classList.add('nav-list__link-active');
+    }
+    else{
+      el.classList.remove('nav-list__link-active');
+    }
+    console.log(currentUrl);
+    
+  })
 
   // Временно отключаем анимацию для кнопки
   if (buttonDarkMode) {
