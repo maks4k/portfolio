@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll('.nav-list__link');
   const currentUrl = window.location.href;
 
+
+  
+
   // цикл опрежделения на какой страницы мы находимся и добавление к ней класс active
   links.forEach(el=>{
     if (el.href.includes(currentUrl)) {
